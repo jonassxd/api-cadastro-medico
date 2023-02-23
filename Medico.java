@@ -8,13 +8,16 @@ import lombok.NoArgsConstructor;
 import med.voll.api.endereco.Endereco;
 
 
-
+    // nome da tabela no banco de dados
     @Table(name = "medicos")
+    // nome da entidade
     @Entity(name = "Medico")
+    // Loombok
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
     @EqualsAndHashCode(of="id")
+    
     public class Medico {
 
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +41,7 @@ import med.voll.api.endereco.Endereco;
             this.crm = dados.crm();
             this.especialidade = dados.especialidade();
             this.endereco = new Endereco(dados.endereco());
-            //this.telefone = dados.telefone();
+           
         }
 
         public void atualizarInformacoes(DadosAtualizacaoMedicos dados) {
