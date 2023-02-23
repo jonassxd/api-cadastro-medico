@@ -22,7 +22,6 @@ import med.voll.api.endereco.Endereco;
         private String nome;
         private String email;
         private String crm;
-        //private String telefone;
 
         @Enumerated(EnumType.STRING)
         private Especialidade especialidade;
